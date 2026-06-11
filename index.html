@@ -1,15 +1,276 @@
-<html>
+<!DOCTYPE html>
+<html lang="th">
 <head>
-<title>
-  นายพิชญพงศ์  วัฒฐานะ
-</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>แนะนำตัว | เคียวโก๊ะ</title>
+
   <style>
-    .bigfont{
-      font-size : 72px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Prompt", "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      color: #222;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 30px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .profile {
+      background: linear-gradient(160deg, #2563eb, #ec4899);
+      color: white;
+      padding: 50px 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: white;
+      color: #2563eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 64px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .profile h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .profile p {
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .content {
+      padding: 45px;
+    }
+
+    .content h2 {
+      font-size: 30px;
+      color: #1e3a8a;
+      margin-bottom: 15px;
+    }
+
+    .content .intro {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .info-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .info {
+      background: #f1f5f9;
+      padding: 18px;
+      border-radius: 18px;
+      border-left: 6px solid #3b82f6;
+    }
+
+    .info strong {
+      display: block;
+      color: #1e40af;
+      margin-bottom: 5px;
+    }
+
+    .skills {
+      margin-top: 20px;
+    }
+
+    .skills h3 {
+      color: #be185d;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill-list span {
+      background: linear-gradient(135deg, #3b82f6, #ec4899);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 15px;
+      box-shadow: 0 8px 18px rgba(59, 130, 246, 0.25);
+    }
+
+    .quote {
+      margin-top: 35px;
+      padding: 22px;
+      background: #fff7ed;
+      border-radius: 20px;
+      color: #9a3412;
+      font-size: 18px;
+      line-height: 1.7;
+      border-left: 6px solid #fb923c;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #f1f5f9;
+      color: #2563eb;
+      border: 2px solid #2563eb;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        grid-template-columns: 1fr;
+      }
+
+      .content {
+        padding: 30px;
+      }
+
+      .info-box {
+        grid-template-columns: 1fr;
+      }
+
+      .profile h1 {
+        font-size: 28px;
+      }
+
+      .content h2 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="bigfont">นักเรียน 5/1  ที่รัก</div>
+
+  <div class="card">
+    <div class="profile">
+      <div class="avatar">K</div>
+      <h1>เคียวโก๊ะ</h1>
+      <p>ยินดีต้อนรับสู่หน้าเว็บแนะนำตัวของผม</p>
+    </div>
+
+    <div class="content">
+      <h2>สวัสดีครับ ผมชื่อเคียวโก๊ะ</h2>
+
+      <p class="intro">
+        ผมเป็นคนที่ชอบเรียนรู้สิ่งใหม่ ๆ ชอบลองทำสิ่งที่สร้างสรรค์
+        และอยากพัฒนาตัวเองให้เก่งขึ้นในทุก ๆ วัน
+        หน้าเว็บนี้เป็นเว็บแนะนำตัวเล็ก ๆ ที่สร้างด้วย HTML และ CSS
+      </p>
+
+      <div class="info-box">
+        <div class="info">
+          <strong>ชื่อ</strong>
+          เคียวโก๊ะ
+        </div>
+
+        <div class="info">
+          <strong>ความสนใจ</strong>
+          เทคโนโลยี / การออกแบบ / การเรียนรู้
+        </div>
+
+        <div class="info">
+          <strong>นิสัย</strong>
+          เป็นกันเอง ชอบช่วยเหลือ และชอบพัฒนา
+        </div>
+
+        <div class="info">
+          <strong>เป้าหมาย</strong>
+          อยากสร้างผลงานดี ๆ ด้วยตัวเอง
+        </div>
+      </div>
+
+      <div class="skills">
+        <h3>สิ่งที่ผมชอบ</h3>
+        <div class="skill-list">
+          <span>เขียนเว็บ</span>
+          <span>ออกแบบ</span>
+          <span>ฟังเพลง</span>
+          <span>เล่นเกม</span>
+          <span>เรียนรู้สิ่งใหม่</span>
+        </div>
+      </div>
+
+      <div class="quote">
+        “ทุกความเก่ง เริ่มต้นจากการลองทำครั้งแรก”
+      </div>
+
+      <div class="buttons">
+        <a href="#" class="btn btn-primary">รู้จักผมมากขึ้น</a>
+        <a href="#" class="btn btn-secondary">ติดต่อผม</a>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
